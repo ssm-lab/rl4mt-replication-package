@@ -84,7 +84,7 @@ def plot(random_processed, unadvised_processed, advised_processed, plot_type, sa
     if plot_type.is_synthetic():
         title = os.path.splitext(os.path.basename(plot_type.value))[0]
     else:
-        title = os.path.splitext(os.path.basename(plot_type.value[0]))[0]
+        title = os.path.splitext(os.path.basename(plot_type.value[0]))[0].replace("Sequential", "")
 
     def plot_variant(ax, yscale='linear'):
         lines, labels = [], []
