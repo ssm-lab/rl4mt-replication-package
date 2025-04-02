@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 from enum import Enum
 import os
 
-inputFolder = '../01-data'
-outputFolder = '../03-results'
+inputFolder = '01-data'
+outputFolder = '03-results'
 MAX_NUMBER_OF_EXPERIMENTS = 30
 
 
