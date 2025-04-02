@@ -17,6 +17,9 @@ Model-driven engineering (MDE) problems often require complex model transformati
 - [02-scripts](/02-scripts) - Contains a Python script to generate the plots in the [03-results](/03-results) folder
 - [03-results](/03-results) - Contains plots that are used in the publication
 
+## Usage
+Run `python .\02-scripts\plotting.py` from the root and follow the instructions. Results will be generated into `03-results`.
+
 ## Experimental setup
 
 ### Problem
