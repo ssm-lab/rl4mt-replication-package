@@ -8,14 +8,14 @@
 Model-driven engineering problems often require complex model transformations (MTs), i.e., MTs that are chained in extensive sequences. Pertinent examples of such problems include model synchronization, automated model repair, and design space exploration. Manually developing complex MTs is an error-prone and often infeasible process. Reinforcement learning (RL) is an apt way to alleviate these issues. In RL, an autonomous agent explores the state space through trial and error to identify beneficial sequences of actions, such as MTs. However, RL methods exhibit performance issues in complex problems. In these situations, human guidance can be of high utility. In this paper, we present an approach and technical framework for developing complex MT sequences through RL, guided by potentially uncertain human advice. Our framework allows user-defined MTs to be mapped onto RL primitives, and executes them as RL programs to find optimal MT sequences. Our evaluation shows that human guidance, even if uncertain, substantially improves RL performance, and results in more efficient development of complex MTs. Through a sensible trade-off between the certainty and timeliness of human advice, our method takes a firm step towards machine learning-driven human-in-the-loop engineering methods.
 
 ## Contents
-- [00-settings](/00-settings) - ${\color{red}\textbf{TODO}}$ this should be figured out
-- [01-data](/01-data) - Contains experimental data produced in accordance with the [Experiment settings](#experiment-settings)
+- `00-settings` - ${\color{red}\textbf{TODO}}$ this should be figured out
+- `01-data` - Contains experimental data produced in accordance with the `Experiment settings`
   - `random.csv` - Cumulative rewards of a random-walk agent
   - `unadvised.csv` - Cumulative rewards of an unadvised (but not random) agent
   - `advisedAll.csv` - Cumulative rewards of an agent advised by information about every state
   - `advisedHolesAndGoal.csv` - Cumulative rewards of an agent advised by information about terminating states (negative termination and positive termination, i.e., goal)
-- [02-scripts](/02-scripts) - Contains a Python script to generate the plots in the [03-results](/03-results) folder
-- [03-results](/03-results) - Contains plots that are used in the publication
+- `02-scripts` - Contains a Python script to generate the plots in the `03-results` folder
+- `03-results` - Contains plots that are used in the publication
 
 ## Usage
 Run `python .\02-scripts\plotting.py` from the root and follow the instructions. Results will be generated into `03-results`.
