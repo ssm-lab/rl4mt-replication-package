@@ -116,7 +116,8 @@ Run `python .\02-scripts\plotting.py` from the root and follow the instructions.
 
 
 #### Oracle - 100% advice quota
-${\color{red}\textbf{TODO: two plots in PNG}}$
+![Oracle 100% - Linear scale](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_allRewardData_linear.png)
+![Oracle 100% - Log scale](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_allRewardData_log.png)
 
 #### Oracle - 20% advice quota
 ${\color{red}\textbf{TODO: two plots in PNG}}$
