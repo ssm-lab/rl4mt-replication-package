@@ -2,11 +2,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from enum import Enum
 import os
+from matplotlib.ticker import ScalarFormatter
+
 
 inputFolder = '01-data'
 outputFolder = '03-results'
 MAX_NUMBER_OF_EXPERIMENTS = 30
 
+output_file_extensions = ['pdf', 'png']
 
 class PlotType(Enum):
     ADVISED_ALL = f"{inputFolder}/allRewardData.csv"
@@ -116,19 +119,24 @@ def plot(random_processed, unadvised_processed, advised_processed, plot_type, sa
         lines.append(line_random)
         labels.append('Random')
 
-        ax.set_xlabel('Episode')
-        ax.set_ylabel('Cumulative Reward')
+        ax.set_xlabel('Episode', fontsize=16)
+        ax.set_ylabel('Cumulative Reward', fontsize=16)
         ax.set_yscale(yscale)
         ax.set_ylim([1 if yscale == 'log' else 0, 10000])
         legend_loc = 'lower right' if yscale == 'log' else 'upper left'
         ax.legend(lines, labels, loc=legend_loc)
-
+    
     # linear
     fig_linear, ax_linear = plt.subplots(figsize=(8, 6))
     plot_variant(ax_linear, yscale='linear')
     plt.tight_layout()
+    plt.xticks(fontsize=14)
+    plt.yticks(fontsize=14)
+    plt.legend(fontsize=16)
+
     if save_plot:
-        fig_linear.savefig(f"{outputFolder}/plot_{title}_linear.pdf", bbox_inches='tight')
+        for file_extension in output_file_extensions:
+            fig_linear.savefig(f"{outputFolder}/plot_{title}_linear.{file_extension}", bbox_inches='tight')
     if show_plot:
         plt.show()
     else:
@@ -138,8 +146,13 @@ def plot(random_processed, unadvised_processed, advised_processed, plot_type, sa
     fig_log, ax_log = plt.subplots(figsize=(8, 6))
     plot_variant(ax_log, yscale='log')
     plt.tight_layout()
+    plt.xticks(fontsize=14)
+    plt.yticks(fontsize=14)
+    plt.legend(fontsize=16)
+
     if save_plot:
-        fig_log.savefig(f"{outputFolder}/plot_{title}_log.pdf", bbox_inches='tight')
+        for file_extension in output_file_extensions:
+            fig_log.savefig(f"{outputFolder}/plot_{title}_log.{file_extension}", bbox_inches='tight')
     if show_plot:
         plt.show()
     else:
@@ -169,24 +182,42 @@ def process_and_plot(plot_type: PlotType, save_plot=False, show_plot=True):
              plot_type, save_plot, show_plot)
 
 
-if __name__ == "__main__":
-    print("Select the advised data CSV file by number:")
-    print("\n".join(PlotType.list_options()))
+def process_selections():
+    for i in range (1, 7):
+        print(f"Generating plot for option {PlotType.list_options()[i-1]}.")
+        process_selection(i, interactive=False)
 
-    while True:
-        try:
-            file_number = int(input("Enter number: "))
-            plot_type = PlotType.get_by_number(file_number)
-            break
-        except (ValueError, IndexError):
-            print("Invalid input. Please enter a number between 1 and 6.")
-
-    show_plot = input("Show plots? (y/n): ") == 'y'
-
-    save_plot = input("Save plots? (y/n): ") == 'y'
+def process_selection(file_number, interactive=True):
+    plot_type = PlotType.get_by_number(file_number)
+    
+    if(interactive):
+        show_plot = input("Show plots? (y/n): ") == 'y'
+        save_plot = input("Save plots? (y/n): ") == 'y'
+    else:
+        show_plot = False
+        save_plot = True
 
     try:
         process_and_plot(plot_type, save_plot=save_plot,
                          show_plot=show_plot)
     except FileNotFoundError:
         print(f"Error: File '{plot_type}' not found.")
+
+if __name__ == "__main__":
+    print("Select the advised data CSV file by number:")
+    options = ['0. ALL FILES'] + PlotType.list_options()
+    print("\n".join(options))
+
+    while True:
+        try:
+            file_number = int(input("Enter number: "))
+            break
+        except (ValueError, IndexError):
+            print("Invalid input. Please enter a number between 0 and 6.")
+    
+    if(file_number!=0):
+        process_selection(file_number, interactive=True)
+    elif(file_number==0):
+        process_selections()
+    else:
+        raise ValueError("Invalid option")
