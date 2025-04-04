@@ -156,7 +156,9 @@ Run `python .\02-scripts\plotting.py` from the root and follow the instructions.
 </table>
 
 #### Two cooperating humans - 10% advice quota each (total 20%)
-${\color{red}\textbf{TODO: two plots in PNG}}$
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_coop10RewardData_linear.png" alt="Two coopearting human with 10% each - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_coop10RewardData_log.png" alt="Two coopearting human with 10% each - Log scale" width="300">
 
 #### Two cooperating humans - 5% advice quota each (total 10%)
-${\color{red}\textbf{TODO: two plots in PNG}}$
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_coop5RewardData_linear.png" alt="Two coopearting human with 5% each - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_coop5RewardData_log.png" alt="Two coopearting human with 5% each - Log scale" width="300">
