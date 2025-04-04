@@ -28,7 +28,7 @@ Model-driven engineering problems often require complex model transformations (M
 ### Problem
 The map used in the experiments:
 
-![The map used in the experiments](https://github.com/ssm-lab/rl4mt-replication-package/tree/main/00-settings/lake-12x12-seed63.png)
+![The map used in the experiments](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/00-settings/lake-12x12-seed63.png)
 
 ### Advice files
 ${\color{red}\textbf{TODO}}$
@@ -116,8 +116,8 @@ Run `python .\02-scripts\plotting.py` from the root and follow the instructions.
 
 
 #### Oracle - 100% advice quota
-![Oracle 100% - Linear scale](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_allRewardData_linear.png)
-![Oracle 100% - Log scale](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_allRewardData_log.png)
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_allRewardData_linear.png" alt="Oracle 100% - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_allRewardData_log.png" alt="Oracle 100% - Log scale" width="300">
 
 #### Oracle - 20% advice quota
 ${\color{red}\textbf{TODO: two plots in PNG}}$
