@@ -57,20 +57,102 @@ Run `python .\02-scripts\plotting.py` from the root and follow the instructions.
 
 ## Results
 
-### Oracle - 100% advice quota
+### Oracle and single human
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan="2">Oracle</th>
+            <th colspan="2">Single human</th>
+        </tr>
+        <tr>
+            <th>u</th>
+            <th>100%</th>
+            <th>20%</th>
+            <th>10%</th>
+            <th>5%</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>0.0</td>
+            <td>9900.100</td>
+            <td>9914.900</td>
+            <td>9768.000</td>
+            <td>8051.300</td>
+        </tr>
+        <tr>
+            <td>0.2</td>
+            <td>9685.900</td>
+            <td>8948.933</td>
+            <td>8538.266</td>
+            <td>5287.833</td>
+        </tr>
+        <tr>
+            <td>0.4</td>
+            <td>7974.066</td>
+            <td>5216.433</td>
+            <td>6121.033</td>
+            <td>2134.966</td>
+        </tr>
+        <tr>
+            <td>0.6</td>
+            <td>5094.333</td>
+            <td>2177.633</td>
+            <td>3488.700</td>
+            <td>2246.733</td>
+        </tr>
+        <tr>
+            <td>0.8</td>
+            <td>1502.500</td>
+            <td>523.633</td>
+            <td>1126.300</td>
+            <td>1108.666</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+#### Oracle - 100% advice quota
 ${\color{red}\textbf{TODO: two plots in PNG}}$
 
-### Oracle - 20% advice quota
+#### Oracle - 20% advice quota
 ${\color{red}\textbf{TODO: two plots in PNG}}$
 
-### Single human - 10% advice quota
+#### Single human - 10% advice quota
 ${\color{red}\textbf{TODO: two plots in PNG}}$
 
-### Single human - 5% advice quota
+#### Single human - 5% advice quota
 ${\color{red}\textbf{TODO: two plots in PNG}}$
 
-### Two cooperating humans - 10% advice quota each (total 20%)
+### Two cooperating humans
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>10%</th>
+            <th>5%</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Sequential</td>
+            <td>8078.366</td>
+            <td>5037.066</td>
+        </tr>
+        <tr>
+            <td>Parallel</td>
+            <td>5429.466</td>
+            <td>4130.666</td>
+        </tr>
+    </tbody>
+</table>
+
+#### Two cooperating humans - 10% advice quota each (total 20%)
 ${\color{red}\textbf{TODO: two plots in PNG}}$
 
-### Two cooperating humans - 5% advice quota each (total 10%)
+#### Two cooperating humans - 5% advice quota each (total 10%)
 ${\color{red}\textbf{TODO: two plots in PNG}}$
