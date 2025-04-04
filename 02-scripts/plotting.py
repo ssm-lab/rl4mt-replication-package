@@ -133,10 +133,15 @@ def plot(random_processed, unadvised_processed, advised_processed, plot_type, sa
     plt.xticks(fontsize=14)
     plt.yticks(fontsize=14)
     plt.legend(fontsize=16)
-
+    
+    for file_extension in output_file_extensions:
+        extension_specific_directory = f"{outputFolder}/{file_extension}"
+        if not os.path.exists(extension_specific_directory):
+            os.makedirs(extension_specific_directory)
+    
     if save_plot:
         for file_extension in output_file_extensions:
-            fig_linear.savefig(f"{outputFolder}/plot_{title}_linear.{file_extension}", bbox_inches='tight')
+            fig_linear.savefig(f"{outputFolder}/{file_extension}/plot_{title}_linear.{file_extension}", bbox_inches='tight')
     if show_plot:
         plt.show()
     else:
@@ -152,7 +157,7 @@ def plot(random_processed, unadvised_processed, advised_processed, plot_type, sa
 
     if save_plot:
         for file_extension in output_file_extensions:
-            fig_log.savefig(f"{outputFolder}/plot_{title}_log.{file_extension}", bbox_inches='tight')
+            fig_log.savefig(f"{outputFolder}/{file_extension}/plot_{title}_log.{file_extension}", bbox_inches='tight')
     if show_plot:
         plt.show()
     else:
