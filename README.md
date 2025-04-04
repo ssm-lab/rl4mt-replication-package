@@ -56,3 +56,21 @@ ${\color{red}\textbf{TODO}}$
 Run `python .\02-scripts\plotting.py` from the root and follow the instructions. Results will be generated into `03-results`.
 
 ## Results
+
+### Oracle - 100% advice quota
+${\color{red}\textbf{TODO: two plots in PNG}}$
+
+### Oracle - 20% advice quota
+${\color{red}\textbf{TODO: two plots in PNG}}$
+
+### Single human - 10% advice quota
+${\color{red}\textbf{TODO: two plots in PNG}}$
+
+### Single human - 5% advice quota
+${\color{red}\textbf{TODO: two plots in PNG}}$
+
+### Two cooperating humans - 10% advice quota each (total 20%)
+${\color{red}\textbf{TODO: two plots in PNG}}$
+
+### Two cooperating humans - 5% advice quota each (total 10%)
+${\color{red}\textbf{TODO: two plots in PNG}}$
