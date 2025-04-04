@@ -120,13 +120,16 @@ Run `python .\02-scripts\plotting.py` from the root and follow the instructions.
 <img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_allRewardData_log.png" alt="Oracle 100% - Log scale" width="300">
 
 #### Oracle - 20% advice quota
-${\color{red}\textbf{TODO: two plots in PNG}}$
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_holesAndGoalRewardData_linear.png" alt="Oracle 20% - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_holesAndGoalRewardData_log.png" alt="Oracle 20% - Log scale" width="300">
 
 #### Single human - 10% advice quota
-${\color{red}\textbf{TODO: two plots in PNG}}$
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_human10RewardData_linear.png" alt="Human 10% - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_human10RewardData_log.png" alt="Human 10% - Log scale" width="300">
 
 #### Single human - 5% advice quota
-${\color{red}\textbf{TODO: two plots in PNG}}$
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_human5RewardData_linear.png" alt="Human 5% - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_human5RewardData_log.png" alt="Human 5% - Log scale" width="300">
 
 ### Two cooperating humans
 
