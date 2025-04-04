@@ -28,7 +28,7 @@ Model-driven engineering problems often require complex model transformations (M
 ### Problem
 The map used in the experiments:
 
-![The map used in the experiments](https://raw.githubusercontent.com/ssm-lab/rl4mt-replication-package/refs/heads/main/00-settings/lake-12x12-seed63.png)
+![The map used in the experiments](https://github.com/ssm-lab/rl4mt-replication-package/tree/main/00-settings/lake-12x12-seed63.png)
 
 ### Advice files
 ${\color{red}\textbf{TODO}}$
