@@ -16,10 +16,16 @@ Model-driven engineering problems often require complex model transformations (M
 ## Content description
 - `00-settings` - ${\color{red}\textbf{TODO}}$ this should be figured out
 - `01-data` - Contains experimental data produced in accordance with the `Experiment settings`
-  - `random.csv` - Cumulative rewards of a random-walk agent
-  - `unadvised.csv` - Cumulative rewards of an unadvised (but not random) agent
-  - `advisedAll.csv` - Cumulative rewards of an agent advised by information about every state
-  - `advisedHolesAndGoal.csv` - Cumulative rewards of an agent advised by information about terminating states (negative termination and positive termination, i.e., goal)
+  - `randomRewardData.csv` - Cumulative rewards of a random-walk agent
+  - `unadvisedRewardData.csv` - Cumulative rewards of an unadvised (but not random) agent
+  - `allRewardData.csv` - Cumulative rewards of an agent advised by information about every state
+  - `holesAndGoalRewardData.csv` - Cumulative rewards of an agent advised by information about terminating states (negative termination and positive termination, i.e., goal)
+  - `human10RewardData.csv` - Cumulative rewards of an agent advised by a single human advisor about 10% of the states
+  - `human5RewardData.csv` - Cumulative rewards of an agent advised by a single human advisor about 5% of the states
+  - `coop10SequentialRewardData.csv` - Cumulative rewards of an agent advised by two cooperating human advisors (one located at top left, one located at bottom right) who each advise about 10% of the states 
+  - `coop10ParallelRewardData.csv` - Cumulative rewards of an agent advised by two cooperating human advisors (one located at top right, one located at bottom left) who each advise about 10% of the states
+  - `coop5SequentialRewardData.csv` - Cumulative rewards of an agent advised by two cooperating human advisors (one located at top left, one located at bottom right) who each advise about 5% of the states
+  - `coop5ParallelRewardData.csv` - Cumulative rewards of an agent advised by two cooperating human advisors (one located at top right, one located at bottom left) who each advise about 5% of the states
 - `02-scripts` - Contains a Python script to generate the plots in the `03-results` folder
 - `03-results` - Contains plots that are used in the publication
 
