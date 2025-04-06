@@ -16,10 +16,16 @@ Model-driven engineering problems often require complex model transformations (M
 ## Content description
 - `00-settings` - ${\color{red}\textbf{TODO}}$ this should be figured out
 - `01-data` - Contains experimental data produced in accordance with the `Experiment settings`
-  - `random.csv` - Cumulative rewards of a random-walk agent
-  - `unadvised.csv` - Cumulative rewards of an unadvised (but not random) agent
-  - `advisedAll.csv` - Cumulative rewards of an agent advised by information about every state
-  - `advisedHolesAndGoal.csv` - Cumulative rewards of an agent advised by information about terminating states (negative termination and positive termination, i.e., goal)
+  - `randomRewardData.csv` - Cumulative rewards of a random-walk agent
+  - `unadvisedRewardData.csv` - Cumulative rewards of an unadvised (but not random) agent
+  - `allRewardData.csv` - Cumulative rewards of an agent advised by information about every state
+  - `holesAndGoalRewardData.csv` - Cumulative rewards of an agent advised by information about terminating states (negative termination and positive termination, i.e., goal)
+  - `human10RewardData.csv` - Cumulative rewards of an agent advised by a single human advisor about 10% of the states
+  - `human5RewardData.csv` - Cumulative rewards of an agent advised by a single human advisor about 5% of the states
+  - `coop10SequentialRewardData.csv` - Cumulative rewards of an agent advised by two cooperating human advisors (one located at top left, one located at bottom right) who each advise about 10% of the states 
+  - `coop10ParallelRewardData.csv` - Cumulative rewards of an agent advised by two cooperating human advisors (one located at top right, one located at bottom left) who each advise about 10% of the states
+  - `coop5SequentialRewardData.csv` - Cumulative rewards of an agent advised by two cooperating human advisors (one located at top left, one located at bottom right) who each advise about 5% of the states
+  - `coop5ParallelRewardData.csv` - Cumulative rewards of an agent advised by two cooperating human advisors (one located at top right, one located at bottom left) who each advise about 5% of the states
 - `02-scripts` - Contains a Python script to generate the plots in the `03-results` folder
 - `03-results` - Contains plots that are used in the publication
 
@@ -28,7 +34,7 @@ Model-driven engineering problems often require complex model transformations (M
 ### Problem
 The map used in the experiments:
 
-![The map used in the experiments](https://github.com/ssm-lab/rl4mt-replication-package/tree/main/00-settings/lake-12x12-seed63.png)
+![The map used in the experiments](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/00-settings/lake-12x12-seed63.png)
 
 ### Advice files
 ${\color{red}\textbf{TODO}}$
@@ -116,16 +122,20 @@ Run `python .\02-scripts\plotting.py` from the root and follow the instructions.
 
 
 #### Oracle - 100% advice quota
-${\color{red}\textbf{TODO: two plots in PNG}}$
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_allRewardData_linear.png" alt="Oracle 100% - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_allRewardData_log.png" alt="Oracle 100% - Log scale" width="300">
 
 #### Oracle - 20% advice quota
-${\color{red}\textbf{TODO: two plots in PNG}}$
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_holesAndGoalRewardData_linear.png" alt="Oracle 20% - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_holesAndGoalRewardData_log.png" alt="Oracle 20% - Log scale" width="300">
 
 #### Single human - 10% advice quota
-${\color{red}\textbf{TODO: two plots in PNG}}$
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_human10RewardData_linear.png" alt="Human 10% - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_human10RewardData_log.png" alt="Human 10% - Log scale" width="300">
 
 #### Single human - 5% advice quota
-${\color{red}\textbf{TODO: two plots in PNG}}$
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_human5RewardData_linear.png" alt="Human 5% - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_human5RewardData_log.png" alt="Human 5% - Log scale" width="300">
 
 ### Two cooperating humans
 
@@ -152,7 +162,9 @@ ${\color{red}\textbf{TODO: two plots in PNG}}$
 </table>
 
 #### Two cooperating humans - 10% advice quota each (total 20%)
-${\color{red}\textbf{TODO: two plots in PNG}}$
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_coop10RewardData_linear.png" alt="Two coopearting human with 10% each - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_coop10RewardData_log.png" alt="Two coopearting human with 10% each - Log scale" width="300">
 
 #### Two cooperating humans - 5% advice quota each (total 10%)
-${\color{red}\textbf{TODO: two plots in PNG}}$
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_coop5RewardData_linear.png" alt="Two coopearting human with 5% each - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_coop5RewardData_log.png" alt="Two coopearting human with 5% each - Log scale" width="300">
