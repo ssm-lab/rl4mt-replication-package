@@ -59,7 +59,8 @@ ${\color{red}\textbf{TODO}}$
 | Cooperative advice type | {Sequential cooperation, parallel cooperation} |
 
 ## Data replication steps
-Run `python .\02-scripts\plotting.py` from the root and follow the instructions. Results will be generated into `03-results`.
+- For the charts, run `python .\02-scripts\plotting.py` from the root and follow the instructions. Results will be generated into `03-results` in two formats, in the respective `pdf` and `png` subfolders.
+- For the significance tests, run `python .\02-scripts\t_test.py > 03-results/significance/results.txt` from the root. Results will be generated into `03-results/significance` in a textual tabular format.
 
 ## Results
 
