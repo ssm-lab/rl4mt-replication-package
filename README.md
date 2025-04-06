@@ -9,12 +9,12 @@ Model-driven engineering problems often require complex model transformations (M
 
 ## Table of contents
 - [Content description](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Content-description)
+- [Replication steps](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Replication-steps)
 - [Experiment setup](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Experiment-setup)
-- [Data replication steps](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Data-replication-steps)
 - [Results](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Results)
 
 ## Content description
-- `00-settings` - ${\color{red}\textbf{TODO}}$ this should be figured out
+- `00-settings` - Contains all the experimental artifacts and visualizations used in our experiments (map, advice files, and advice visualized on the map)
 - `01-data` - Contains experimental data produced in accordance with the `Experiment settings`
   - `randomRewardData.csv` - Cumulative rewards of a random-walk agent
   - `unadvisedRewardData.csv` - Cumulative rewards of an unadvised (but not random) agent
@@ -29,15 +29,16 @@ Model-driven engineering problems often require complex model transformations (M
 - `02-scripts` - Contains a Python script to generate the plots in the `03-results` folder
 - `03-results` - Contains plots that are used in the publication
 
+## Replication steps
+- For the charts, run `python .\02-scripts\plotting.py` from the root and follow the instructions. Results will be generated into `03-results` in two formats, in the respective `pdf` and `png` subfolders.
+- For the significance tests, run `python .\02-scripts\t_test.py > 03-results/significance/results.txt` from the root. Results will be generated into `03-results/significance` in a textual tabular format.
+
 ## Experiment setup
 
 ### Problem
 The map used in the experiments:
 
 ![The map used in the experiments](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/00-settings/lake-12x12-seed63.png)
-
-### Advice files
-${\color{red}\textbf{TODO}}$
 
 ### Settings and hyperparameters
 
@@ -57,10 +58,6 @@ ${\color{red}\textbf{TODO}}$
 | Uncertainty - Oracle and Single human) | {0.2k ∣ k $\in$ 0..4} |
 | Uncertainty – Cooperating humans | 2D Manhattan distance |
 | Cooperative advice type | {Sequential cooperation, parallel cooperation} |
-
-## Data replication steps
-- For the charts, run `python .\02-scripts\plotting.py` from the root and follow the instructions. Results will be generated into `03-results` in two formats, in the respective `pdf` and `png` subfolders.
-- For the significance tests, run `python .\02-scripts\t_test.py > 03-results/significance/results.txt` from the root. Results will be generated into `03-results/significance` in a textual tabular format.
 
 ## Results
 
