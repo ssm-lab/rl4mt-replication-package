@@ -10,6 +10,8 @@ Model-driven engineering problems often require complex model transformations (M
 ## Table of contents
 - [Content description](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Content-description)
 - [Replication steps](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Replication-steps)
+  - [Reproducing raw data](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Reproducing-raw-data)
+  - [Reproducing analyses](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Reproducing-analyses)
 - [Experiment setup](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Experiment-setup)
 - [Results](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Results)
 
@@ -30,6 +32,55 @@ Model-driven engineering problems often require complex model transformations (M
 - `03-results` - Contains plots that are used in the publication
 
 ## Replication steps
+### Reproducing raw data
+#### Random Agent
+1. Run `LakeTestRandom.xtend`
+2. Rename `rewardData.csv` to `randomRewardData.csv`
+#### Unadvised Agent
+1. Run `LakeTestUnadvised.xtend`
+2. Rename `rewardData.csv` to `unadvisedRewardData.csv`
+#### All (Single Advisor)
+1. In `LakeTestSingleAdvisor.xtend`, on line 233 change the `SingleExperimentMode` to `All`
+	- `runAdvisedAgentSingleAdvisor(SingleExperimentMode.ALL)`
+2. Save and run `LakeTestSingleAdvisor.xtend`
+3. Rename `rewardData.csv` to `allRewardData.csv`
+#### Holes & Goal (Single Advisor)
+1. In `LakeTestSingleAdvisor.xtend`, on line 233 change the `SingleExperimentMode` to `HOLES_AND_GOAL`
+	- `runAdvisedAgentSingleAdvisor(SingleExperimentMode.HOLES_AND_GOAL)`
+2. Save and run `LakeTestSingleAdvisor.xtend`
+3. Rename `rewardData.csv` to `holesAndGoalRewardData.csv`
+#### Human 10 (Single Advisor)
+1. In `LakeTestSingleAdvisor.xtend`, on line 233 change the `SingleExperimentMode` to `HUMAN10`
+	- `runAdvisedAgentSingleAdvisor(SingleExperimentMode.HUMAN10)`
+2. Save and run `LakeTestSingleAdvisor.xtend`
+3. Rename `rewardData.csv` to `human10RewardData.csv`
+#### Human 5 (Single Advisor)
+1. In `LakeTestSingleAdvisor.xtend`, on line 233 change the `SingleExperimentMode` to `HUMAN5`
+	- `runAdvisedAgentSingleAdvisor(SingleExperimentMode.HUMAN5)`
+2. Save and run `LakeTestSingleAdvisor.xtend`
+3. Rename `rewardData.csv` to `human5RewardData.csv`
+#### Coop 10 Sequential (Cooperating Advisors)
+1. In `LakeTestCoop.xtend`, on line 333 change the `CoopExperimentMode` to `SEQUENTIAL_10`
+	- `runAdvisedAgentCoop(CoopExperimentMode.SEQUENTIAL_10)`
+2. Save and run `LakeTestCoop.xtend`
+3. Rename `rewardData.csv` to `coop10SequentialRewardData.csv`
+#### Coop 10 Parallel (Cooperating Advisors)
+1. In `LakeTestCoop.xtend`, on line 333 change the `CoopExperimentMode` to `PARALLEL_10`
+	- `runAdvisedAgentCoop(CoopExperimentMode.PARALLEL_10)`
+2. Save and run `LakeTestCoop.xtend`
+3. Rename `rewardData.csv` to `coop10ParallelRewardData.csv`
+#### Coop 5 Sequential (Cooperating Advisors)
+1. In `LakeTestCoop.xtend`, on line 333 change the `CoopExperimentMode` to `SEQUENTIAL_5`
+	- `runAdvisedAgentCoop(CoopExperimentMode.SEQUENTIAL_5)`
+2. Save and run `LakeTestCoop.xtend`
+3. Rename `rewardData.csv` to `coop5SequentialRewardData.csv`
+#### Coop 5 Parallel (Cooperating Advisors)
+1. In `LakeTestCoop.xtend`, on line 333 change the `CoopExperimentMode` to `PARALLEL_5`
+	- `runAdvisedAgentCoop(CoopExperimentMode.PARALLEL_5)`
+2. Save and run `LakeTestCoop.xtend`
+3. Rename `rewardData.csv` to `coop5ParallelRewardData.csv`
+
+### Reproducing analyses
 - For the charts, run `python .\02-scripts\plotting.py` from the root and follow the instructions. Results will be generated into `03-results` in two formats, in the respective `pdf` and `png` subfolders.
 - For the significance tests, run `python .\02-scripts\t_test.py > 03-results/significance/results.txt` from the root. Results will be generated into `03-results/significance` in a textual tabular format.
 
