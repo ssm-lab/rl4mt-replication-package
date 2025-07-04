@@ -1,7 +1,7 @@
 # Replication package
 
 ### for the paper _Complex Model Transformations by Reinforcement Learning with Uncertain Human Guidance_.
-(Accepted for [MODELS 2025]().)
+(Accepted for [MODELS 2025](https://2025.models-conf.com/track/models-2025-research-papers).)
 
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
