@@ -47,7 +47,7 @@ That is, repeating the original study by collecting new data and repeating the o
 ### Setting up Eclipse
 For the following steps, refer to the tool's [official GitHub repository](https://github.com/ssm-lab/rl4mt).
 1. Follow the setup steps of the tool.
-2. Follow the setup steps of the Lake Example.
+2. Follow the setup steps of the Lake example.
 
 ### Run tests cases to obtain data reported in the paper
 The takeaways of these experiments are presented and analyzed in detail in the paper.
