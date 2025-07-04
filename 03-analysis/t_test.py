@@ -2,7 +2,7 @@ import pandas as pd
 from scipy.stats import ttest_ind
 from itertools import combinations
 
-inputFolder = '01-data'
+inputFolder = '02-data'
 U_VALUES = ['0.0', '0.2', '0.4', '0.6', '0.8']
 NUMBER_OF_EXPERIMENTS = 30
 
