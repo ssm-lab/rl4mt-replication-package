@@ -54,7 +54,7 @@ Data can be obtained by running experiments encoded in unit tests. Unit tests ar
 
 To locate the unit tests, navigate to `https://github.com/ssm-lab/rl4mt/tree/main/tests/ca.mcmaster.ssm.rl4mt.examples.lake.tests/src/ca/mcmaster/ssm/rl4mt/examples/lake/tests` in the tool's [official GitHub repository](https://github.com/ssm-lab/rl4mt).
 
-**NOTE:** The following steps take a long time to compute - typically [TODO: TIME].
+**NOTE:** The following steps take a long time (about half an hour each, depending on the hardware) to compute.
 
 #### Random Agent
 1. Run `LakeTestRandom.xtend`
