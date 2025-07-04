@@ -16,8 +16,8 @@ Model-driven engineering problems often require complex model transformations (M
 - [Results](README.md#Results)
 
 ## Content description
-- `00-settings` - Contains all the experimental artifacts and visualizations used in our experiments (map, advice files, and advice visualized on the map)
-- `01-data` - Contains experimental data produced in accordance with the `Experiment settings`
+- `01-advice` - Contains all the experimental artifacts and visualizations used in our experiments (map, advice files, and advice visualized on the map)
+- `02-data` - Contains experimental data produced in accordance with the `Experiment settings`
   - `randomRewardData.csv` - Cumulative rewards of a random-walk agent
   - `unadvisedRewardData.csv` - Cumulative rewards of an unadvised (but not random) agent
   - `allRewardData.csv` - Cumulative rewards of an agent advised by information about every state
@@ -28,15 +28,15 @@ Model-driven engineering problems often require complex model transformations (M
   - `coop10ParallelRewardData.csv` - Cumulative rewards of an agent advised by two cooperating human advisors (one located at top right, one located at bottom left) who each advise about 10% of the states
   - `coop5SequentialRewardData.csv` - Cumulative rewards of an agent advised by two cooperating human advisors (one located at top left, one located at bottom right) who each advise about 5% of the states
   - `coop5ParallelRewardData.csv` - Cumulative rewards of an agent advised by two cooperating human advisors (one located at top right, one located at bottom left) who each advise about 5% of the states
-- `02-scripts` - Contains a Python script to generate the plots in the `03-results` folder
-- `03-results` - Contains plots that are used in the publication
+- `03-analysis` - Contains Python analysis scripts to obtain the results in the `04-results` folder
+- `04-results` - Contains the plots and statistical significance values that are used in the publication
 
 
 ## Reproduction
 That is, repeating the original study's data analysis on the original study's data.
 
-- For the charts, run `python .\02-scripts\plotting.py` from the root and follow the instructions. Results will be generated into `03-results` in two formats, in the respective `pdf` and `png` subfolders.
-- For the significance tests, run `python .\02-scripts\t_test.py > 03-results/significance/results.txt` from the root. Results will be generated into `03-results/significance` in a textual tabular format.
+- For the charts, run `python .\03-analysis\plotting.py` from the root and follow the instructions. Results will be generated into `04-results` in two formats, in the respective `pdf` and `png` subfolders.
+- For the significance tests, run `python .\03-analysis\t_test.py > 04-results/significance/results.txt` from the root. Results will be generated into `04-results/significance` in a textual tabular format.
 
 **NOTE:** The above steps have been tested with `python>=3.8 && python<=3.13`.
 
@@ -200,20 +200,20 @@ The map used in the experiments:
 
 
 #### Oracle - 100% advice quota
-<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_allRewardData_linear.png" alt="Oracle 100% - Linear scale" width="300">
-<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_allRewardData_log.png" alt="Oracle 100% - Log scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/04-results/png/plot_allRewardData_linear.png" alt="Oracle 100% - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/04-results/png/plot_allRewardData_log.png" alt="Oracle 100% - Log scale" width="300">
 
 #### Oracle - 20% advice quota
-<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_holesAndGoalRewardData_linear.png" alt="Oracle 20% - Linear scale" width="300">
-<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_holesAndGoalRewardData_log.png" alt="Oracle 20% - Log scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/04-results/png/plot_holesAndGoalRewardData_linear.png" alt="Oracle 20% - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/04-results/png/plot_holesAndGoalRewardData_log.png" alt="Oracle 20% - Log scale" width="300">
 
 #### Single human - 10% advice quota
-<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_human10RewardData_linear.png" alt="Human 10% - Linear scale" width="300">
-<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_human10RewardData_log.png" alt="Human 10% - Log scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/04-results/png/plot_human10RewardData_linear.png" alt="Human 10% - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/04-results/png/plot_human10RewardData_log.png" alt="Human 10% - Log scale" width="300">
 
 #### Single human - 5% advice quota
-<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_human5RewardData_linear.png" alt="Human 5% - Linear scale" width="300">
-<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_human5RewardData_log.png" alt="Human 5% - Log scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/04-results/png/plot_human5RewardData_linear.png" alt="Human 5% - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/04-results/png/plot_human5RewardData_log.png" alt="Human 5% - Log scale" width="300">
 
 ### Two cooperating humans
 
@@ -240,9 +240,9 @@ The map used in the experiments:
 </table>
 
 #### Two cooperating humans - 10% advice quota each (total 20%)
-<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_coop10RewardData_linear.png" alt="Two coopearting human with 10% each - Linear scale" width="300">
-<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_coop10RewardData_log.png" alt="Two coopearting human with 10% each - Log scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/04-results/png/plot_coop10RewardData_linear.png" alt="Two coopearting human with 10% each - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/04-results/png/plot_coop10RewardData_log.png" alt="Two coopearting human with 10% each - Log scale" width="300">
 
 #### Two cooperating humans - 5% advice quota each (total 10%)
-<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_coop5RewardData_linear.png" alt="Two coopearting human with 5% each - Linear scale" width="300">
-<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/03-results/png/plot_coop5RewardData_log.png" alt="Two coopearting human with 5% each - Log scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/04-results/png/plot_coop5RewardData_linear.png" alt="Two coopearting human with 5% each - Linear scale" width="300">
+<img src="https://github.com/ssm-lab/rl4mt-replication-package/blob/main/04-results/png/plot_coop5RewardData_log.png" alt="Two coopearting human with 5% each - Log scale" width="300">
