@@ -1,6 +1,7 @@
 # Replication package
 
 ### for the paper _Complex Model Transformations by Reinforcement Learning with Uncertain Human Guidance_.
+(Accepted for [MODELS 2025]().)
 
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
@@ -31,8 +32,19 @@ Model-driven engineering problems often require complex model transformations (M
 - `02-scripts` - Contains a Python script to generate the plots in the `03-results` folder
 - `03-results` - Contains plots that are used in the publication
 
-## Replication steps
-### Reproducing raw data
+## Reproduction
+That is, repeating the original study's data analysis on the original study's data.
+
+### Steps for reproduction
+
+- For the charts, run `python .\02-scripts\plotting.py` from the root and follow the instructions. Results will be generated into `03-results` in two formats, in the respective `pdf` and `png` subfolders.
+- For the significance tests, run `python .\02-scripts\t_test.py > 03-results/significance/results.txt` from the root. Results will be generated into `03-results/significance` in a textual tabular format.
+
+## Replication
+That is, repeating the original study by collecting new data and repeating the original study's analysis on the new data.
+
+### Steps for replication
+
 #### Random Agent
 1. Run `LakeTestRandom.xtend`
 2. Rename `rewardData.csv` to `randomRewardData.csv`
@@ -80,9 +92,7 @@ Model-driven engineering problems often require complex model transformations (M
 2. Save and run `LakeTestCoop.xtend`
 3. Rename `rewardData.csv` to `coop5ParallelRewardData.csv`
 
-### Reproducing analyses
-- For the charts, run `python .\02-scripts\plotting.py` from the root and follow the instructions. Results will be generated into `03-results` in two formats, in the respective `pdf` and `png` subfolders.
-- For the significance tests, run `python .\02-scripts\t_test.py > 03-results/significance/results.txt` from the root. Results will be generated into `03-results/significance` in a textual tabular format.
+
 
 ## Experiment setup
 
