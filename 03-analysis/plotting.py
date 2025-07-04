@@ -5,8 +5,8 @@ import os
 from matplotlib.ticker import ScalarFormatter
 
 
-inputFolder = '01-data'
-outputFolder = '03-results'
+inputFolder = '02-data'
+outputFolder = '04-results'
 MAX_NUMBER_OF_EXPERIMENTS = 30
 
 output_file_extensions = ['pdf', 'png']
