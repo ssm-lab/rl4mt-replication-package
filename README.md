@@ -50,7 +50,7 @@ For the following steps, refer to the tool's [official GitHub repository](https:
 2. Follow the setup steps of the Lake example.
 
 ### Obtaining experimental data
-Data can be obtained by running experiments encoded in unit tests. Unit tests are parameterized with human advice found in the `00-settings` folder of this replication package.
+Data can be obtained by running experiments encoded in unit tests. Unit tests are parameterized with human advice found in the `01-advice` folder of this replication package.
 
 To locate the unit tests, navigate to `https://github.com/ssm-lab/rl4mt/tree/main/tests/ca.mcmaster.ssm.rl4mt.examples.lake.tests/src/ca/mcmaster/ssm/rl4mt/examples/lake/tests` in the tool's [official GitHub repository](https://github.com/ssm-lab/rl4mt).
 
@@ -118,7 +118,7 @@ To locate the unit tests, navigate to `https://github.com/ssm-lab/rl4mt/tree/mai
 ### Problem
 The map used in the experiments:
 
-![The map used in the experiments](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/00-settings/lake-12x12-seed63.png)
+![The map used in the experiments](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/01-advice/lake-12x12-seed63.png)
 
 ### Settings and hyperparameters
 
