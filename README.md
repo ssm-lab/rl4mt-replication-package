@@ -10,8 +10,8 @@ Model-driven engineering problems often require complex model transformations (M
 
 ## Table of contents
 - [Content description](README.md#Content-description)
-- [Reproduction](README.md#Reproduction)
-- [Replication](README.md#Replication)
+- [Reproduction of analysis](README.md#Reproduction)
+- [Reproduction of experimental data](README.md#Replication)
 - [Experiment setup](README.md#Experiment-setup)
 - [Results](README.md#Results)
 
@@ -32,8 +32,7 @@ Model-driven engineering problems often require complex model transformations (M
 - `04-results` - Contains the plots and statistical significance values that are used in the publication
 
 
-## Reproduction
-That is, repeating the original study's data analysis on the original study's data.
+## Reproduction of analysis
 
 - For the charts, run `python .\03-analysis\plotting.py` from the root and follow the instructions. Results will be generated into `04-results` in two formats, in the respective `pdf` and `png` subfolders.
 - For the significance tests, run `python .\03-analysis\t_test.py > 04-results/significance/results.txt` from the root. Results will be generated into `04-results/significance` in a textual tabular format.
@@ -41,8 +40,7 @@ That is, repeating the original study's data analysis on the original study's da
 **NOTE:** The above steps have been tested with `python>=3.8 && python<=3.13`.
 
 
-## Replication
-That is, repeating the original study by collecting new data and repeating the original study's analysis on the new data.
+## Reproduction of experimental data
 
 ### Setting up Eclipse
 For the following steps, refer to the tool's [official GitHub repository](https://github.com/ssm-lab/rl4mt).
