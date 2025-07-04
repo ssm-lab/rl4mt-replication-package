@@ -49,8 +49,10 @@ For the following steps, refer to the tool's [official GitHub repository](https:
 1. Follow the setup steps of the tool.
 2. Follow the setup steps of the Lake example.
 
-### Run tests cases to obtain data reported in the paper
-The takeaways of these experiments are presented and analyzed in detail in the paper.
+### Obtaining experimental data
+Data can be obtained by running experiments encoded in unit tests. Unit tests are parameterized with human advice found in the `00-settings` folder of this replication package.
+
+To locate the unit tests, navigate to `https://github.com/ssm-lab/rl4mt/tree/main/tests/ca.mcmaster.ssm.rl4mt.examples.lake.tests/src/ca/mcmaster/ssm/rl4mt/examples/lake/tests` in the tool's [official GitHub repository](https://github.com/ssm-lab/rl4mt).
 
 #### Random Agent
 1. Run `LakeTestRandom.xtend`
@@ -84,8 +86,7 @@ The takeaways of these experiments are presented and analyzed in detail in the p
 2. Save and run `LakeTestSingleAdvisor.xtend`
 3. Rename `rewardData.csv` to `human5RewardData.csv`
 
-### Run tests cases to obtain data *not* reported in the paper
-The takeaways of these experiments are briefly mentioned in the paper, but not presented in detail due to the page limit.
+**NOTE:** The following data is only briefly mentioned in the paper, but not presented in detail due to the page limit.
 
 #### Cooperating Advisors - Coop 10 Sequential
 1. In `LakeTestCoop.xtend`, on line 333 change the `CoopExperimentMode` to `SEQUENTIAL_10`
