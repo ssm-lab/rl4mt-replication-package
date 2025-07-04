@@ -64,25 +64,33 @@ To locate the unit tests, navigate to `https://github.com/ssm-lab/rl4mt/tree/mai
 1. Run `LakeTestUnadvised.xtend`
 2. Rename `rewardData.csv` to `unadvisedRewardData.csv`
 
-#### Single Advisor - All
+#### Oracle - 100% advice quota
+In this experiment, a single *oracle* advisor gives advice about every tile.
+
 1. In `LakeTestSingleAdvisor.xtend`, on line 233 change the `SingleExperimentMode` to `All`
 	- `runAdvisedAgentSingleAdvisor(SingleExperimentMode.ALL)`
 2. Save and run `LakeTestSingleAdvisor.xtend`
 3. Rename `rewardData.csv` to `allRewardData.csv`
 
-#### Single Advisor - Holes & Goal
+#### Oracle - 20% advice quota
+In this experiment, a single *oracle* advisor gives advice about hole tiles and the goal tile (about 20% of the problem space).
+
 1. In `LakeTestSingleAdvisor.xtend`, on line 233 change the `SingleExperimentMode` to `HOLES_AND_GOAL`
 	- `runAdvisedAgentSingleAdvisor(SingleExperimentMode.HOLES_AND_GOAL)`
 2. Save and run `LakeTestSingleAdvisor.xtend`
 3. Rename `rewardData.csv` to `holesAndGoalRewardData.csv`
 
-#### Single Advisor - Human 10
+#### Single human - 10% advice quota
+In this experiment, a single *human* advisor gives advice about 10% of the problem space.
+
 1. In `LakeTestSingleAdvisor.xtend`, on line 233 change the `SingleExperimentMode` to `HUMAN10`
 	- `runAdvisedAgentSingleAdvisor(SingleExperimentMode.HUMAN10)`
 2. Save and run `LakeTestSingleAdvisor.xtend`
 3. Rename `rewardData.csv` to `human10RewardData.csv`
 
-#### Single Advisor - Human 5
+#### Single human - 5% advice quota
+In this experiment, a single *human* advisor gives advice about 5% of the problem space.
+
 1. In `LakeTestSingleAdvisor.xtend`, on line 233 change the `SingleExperimentMode` to `HUMAN5`
 	- `runAdvisedAgentSingleAdvisor(SingleExperimentMode.HUMAN5)`
 2. Save and run `LakeTestSingleAdvisor.xtend`
@@ -90,25 +98,33 @@ To locate the unit tests, navigate to `https://github.com/ssm-lab/rl4mt/tree/mai
 
 **NOTE:** The following data is only briefly mentioned in the paper, but not presented in detail due to the page limit.
 
-#### Cooperating Advisors - Coop 10 Sequential
+#### Two cooperating humans - 10% advice quota each (total 20%) - Sequential guidance
+In this experiment, two *human* advisors gives advice about 10% of the problem space each. The advisors are located in the top-left corner (start) and the bottom-right corner (goal) and give advice about their local environment. Therefore, the agent is first guided by the first advisor's input, and later, by the second advisor's input -- i.e., guidance is sequential.
+
 1. In `LakeTestCoop.xtend`, on line 333 change the `CoopExperimentMode` to `SEQUENTIAL_10`
 	- `runAdvisedAgentCoop(CoopExperimentMode.SEQUENTIAL_10)`
 2. Save and run `LakeTestCoop.xtend`
 3. Rename `rewardData.csv` to `coop10SequentialRewardData.csv`
 
-#### Cooperating Advisors - Coop 10 Parallel
+#### Two cooperating humans - 10% advice quota each (total 20%) - Parallel guidance
+In this experiment, two *human* advisors gives advice about 10% of the problem space each. The advisors are located in the bottom-left and the top-right corner and give advice about their local environment. Therefore, the agent is sometimes guided by the first advisor's input and sometimes, by the second advisor's input -- i.e., guidance is parallel.
+
 1. In `LakeTestCoop.xtend`, on line 333 change the `CoopExperimentMode` to `PARALLEL_10`
 	- `runAdvisedAgentCoop(CoopExperimentMode.PARALLEL_10)`
 2. Save and run `LakeTestCoop.xtend`
 3. Rename `rewardData.csv` to `coop10ParallelRewardData.csv`
 
-#### Cooperating Advisors - Coop 5 Sequential
+#### Two cooperating humans - 5% advice quota each (total 10%) - Sequential guidance
+In this experiment, two *human* advisors gives advice about 5% of the problem space each. The advisors are located in the top-left corner (start) and the bottom-right corner (goal) and give advice about their local environment. Therefore, the agent is first guided by the first advisor's input, and later, by the second advisor's input -- i.e., guidance is sequential.
+
 1. In `LakeTestCoop.xtend`, on line 333 change the `CoopExperimentMode` to `SEQUENTIAL_5`
 	- `runAdvisedAgentCoop(CoopExperimentMode.SEQUENTIAL_5)`
 2. Save and run `LakeTestCoop.xtend`
 3. Rename `rewardData.csv` to `coop5SequentialRewardData.csv`
 
-#### Cooperating Advisors - Coop 5 Parallel
+#### Two cooperating humans - 5% advice quota each (total 10%) - Parallel guidance
+In this experiment, two *human* advisors gives advice about 5% of the problem space each. The advisors are located in the bottom-left and the top-right corner and give advice about their local environment. Therefore, the agent is sometimes guided by the first advisor's input and sometimes, by the second advisor's input -- i.e., guidance is parallel.
+
 1. In `LakeTestCoop.xtend`, on line 333 change the `CoopExperimentMode` to `PARALLEL_5`
 	- `runAdvisedAgentCoop(CoopExperimentMode.PARALLEL_5)`
 2. Save and run `LakeTestCoop.xtend`
