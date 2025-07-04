@@ -10,9 +10,8 @@ Model-driven engineering problems often require complex model transformations (M
 
 ## Table of contents
 - [Content description](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Content-description)
-- [Replication steps](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Replication-steps)
-  - [Reproducing raw data](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Reproducing-raw-data)
-  - [Reproducing analyses](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Reproducing-analyses)
+- [Reproduction](README.md#Reproduction)
+- [Replication](README.md#Replication)
 - [Experiment setup](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Experiment-setup)
 - [Results](https://github.com/ssm-lab/rl4mt-replication-package/blob/main/README.md#Results)
 
