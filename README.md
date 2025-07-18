@@ -35,9 +35,9 @@ Model-driven engineering problems often require complex model transformations (M
 
 
 ## Reproduction of analysis
-
-- For the charts, run `python .\03-analysis\plotting.py` from the root and follow the instructions. Results will be generated into `04-results` in two formats, in the respective `pdf` and `png` subfolders.
-- For the significance tests, run `python .\03-analysis\t_test.py > 04-results/significance/results.txt` from the root. Results will be generated into `04-results/significance` in a textual tabular format.
+- Install the required Python packages by running `pip install -r .\03-analysis\requirements.txt` from the root folder.
+- For the charts, run `python .\03-analysis\plotting.py` from the root folder and follow the instructions. Results will be generated into `04-results` in two formats, in the respective `pdf` and `png` subfolders.
+- For the significance tests, run `python .\03-analysis\t_test.py > 04-results/significance/results.txt` from the root folder. Results will be generated into `04-results/significance` in a textual tabular format.
 
 **NOTE:** The above steps have been tested with `python>=3.8 && python<=3.13`.
 
