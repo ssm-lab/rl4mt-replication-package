@@ -46,13 +46,36 @@ Model-driven engineering problems often require complex model transformations (M
 
 ### Setting up Eclipse
 For the following steps, refer to the tool's [official GitHub repository](https://github.com/ssm-lab/rl4mt).
-1. Follow the setup steps of the tool.
-2. Follow the setup steps of the Lake example.
+1. Download Eclipse Modeling Tools Version: 2025-06 (4.36.0) from the [Eclipse Foundation site](https://www.eclipse.org/downloads/packages/release/2025-06/r/eclipse-modeling-tools).
+2. Install Eclipse Xtend Version 2.39.0 either through the Marketplace or from the [Xtend site](https://eclipse.dev/Xtext/xtend/).
+3. Install Viatra, Version 2.9.1 either through the Marketplace or from the [Viatra site](https://eclipse.dev/viatra/downloads.html).
+4. Clone the github repository for the tool’s [official GitHub repository](https://github.com/ssm-lab/rl4mt).
+5. Import the contents of the (1) plugins, (2) examples, and (3) tests folders into the running Eclipse instance. 
+6. Generate the RL model and edit code using the `genmodel` in [/plugins/ca.mcmaster.ssm.rl4mt.metamodel/models](https://github.com/ssm-lab/rl4mt/tree/main/plugins/ca.mcmaster.ssm.rl4mt.metamodel/models)).
+	- Open `rl.genmodel`, right-click root node and select generate model code.
+	- Right-click root node and select `generate edit code`.
+7. Generate the Lake model and edit code using the `genmodel` in [/examples/ca.mcmaster.ssm.rl4mt.examples.lake.metamodel/models](https://github.com/ssm-lab/rl4mt/tree/main/examples/ca.mcmaster.ssm.rl4mt.examples.lake.metamodel/models).
+	- Open `lake.genmodel` right-click root node and select `generate model code`.
+	- Right-click root node and select `generate edit code`.
 
 ### Obtaining experimental data
 Data can be obtained by running experiments encoded in unit tests. Unit tests are parameterized with human advice found in the `01-advice` folder of this replication package.
 
 To locate the unit tests, navigate to `https://github.com/ssm-lab/rl4mt/tree/main/tests/ca.mcmaster.ssm.rl4mt.examples.lake.tests/src/ca/mcmaster/ssm/rl4mt/examples/lake/tests` in the tool's [official GitHub repository](https://github.com/ssm-lab/rl4mt).
+
+#### Run configurations
+Repeat these steps for each experiment file.
+1. Right-click on the file name.
+2. Go to `Run as` and click `Run configurations`.
+3. Select `JUnit Plug-in Test` and create a new configuration. Optionally, name this test as the experiment file. 
+4. Under the `Test` tab select `Run a single test` and under `Test class` select the experiment file. 
+5. Click on the `Arguments` tab.
+	- Program arguments: `-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -nosplash`.
+	- VM arguments: `-Xms512m -Xmx4096m`.
+
+Note: Headless mode preferred. 
+- Click on the `Main` tab.
+- Under `Program to Run` select `Run an application` and select `[No Application] - Headless Mode`.
 
 **NOTE:** The following steps take a long time (about half an hour each, depending on the hardware) to compute.
 
