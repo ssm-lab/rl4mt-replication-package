@@ -46,9 +46,9 @@ Model-driven engineering problems often require complex model transformations (M
 
 ### Setting up Eclipse
 For the following steps, refer to the tool's [official GitHub repository](https://github.com/ssm-lab/rl4mt).
-1. Download Eclipse Modeling Tools Version: 2025-06 (4.36.0) from the [Eclipse Foundation site](https://www.eclipse.org/downloads/packages/release/2025-06/r/eclipse-modeling-tools).
-2. Install Eclipse Xtend Version 2.39.0 either through the Marketplace or from the [Xtend site](https://eclipse.dev/Xtext/xtend/).
-3. Install Viatra, Version 2.9.1 either through the Marketplace or from the [Viatra site](https://eclipse.dev/viatra/downloads.html).
+1. Download Eclipse Modeling Tools, Version: 2025-06 (4.36.0) from the [Eclipse Foundation site](https://www.eclipse.org/downloads/packages/release/2025-06/r/eclipse-modeling-tools).
+2. Install Eclipse Xtend, Version: 2.39.0 either through the Marketplace or from the [Xtend site](https://eclipse.dev/Xtext/xtend/).
+3. Install Viatra, Version: 2.9.1 either through the Marketplace or from the [Viatra site](https://eclipse.dev/viatra/downloads.html).
 4. Clone the github repository for the tool’s [official GitHub repository](https://github.com/ssm-lab/rl4mt).
 5. Import the contents of the (1) plugins, (2) examples, and (3) tests folders into the running Eclipse instance. 
 6. Generate the RL model and edit code using the `genmodel` in [/plugins/ca.mcmaster.ssm.rl4mt.metamodel/models](https://github.com/ssm-lab/rl4mt/tree/main/plugins/ca.mcmaster.ssm.rl4mt.metamodel/models)).
