@@ -52,11 +52,11 @@ For the following steps, refer to the tool's [official GitHub repository](https:
 4. Clone the github repository for the tool’s [official GitHub repository](https://github.com/ssm-lab/rl4mt).
 5. Import the contents of the (1) plugins, (2) examples, and (3) tests folders into the running Eclipse instance. 
 6. Generate the RL model and edit code using the `genmodel` in [/plugins/ca.mcmaster.ssm.rl4mt.metamodel/models](https://github.com/ssm-lab/rl4mt/tree/main/plugins/ca.mcmaster.ssm.rl4mt.metamodel/models)).
-	- Open `rl.genmodel`, right-click root node and select generate model code.
-	- Right-click root node and select `generate edit code`.
+	- Open `rl.genmodel`, right-click the root node and select generate model code.
+	- Right-click the root node and select `generate edit code`.
 7. Generate the Lake model and edit code using the `genmodel` in [/examples/ca.mcmaster.ssm.rl4mt.examples.lake.metamodel/models](https://github.com/ssm-lab/rl4mt/tree/main/examples/ca.mcmaster.ssm.rl4mt.examples.lake.metamodel/models).
-	- Open `lake.genmodel` right-click root node and select `generate model code`.
-	- Right-click root node and select `generate edit code`.
+	- Open `lake.genmodel` right-click the root node and select `generate model code`.
+	- Right-click the root node and select `generate edit code`.
 
 ### Obtaining experimental data
 Data can be obtained by running experiments encoded in unit tests. Unit tests are parameterized with human advice found in the `01-advice` folder of this replication package.
@@ -65,7 +65,7 @@ To locate the unit tests, navigate to `https://github.com/ssm-lab/rl4mt/tree/mai
 
 #### Run configurations
 Repeat these steps for each experiment file.
-1. Right-click on the file name.
+1. Right-click the file name.
 2. Go to `Run as` and click `Run configurations`.
 3. Select `JUnit Plug-in Test` and create a new configuration. Optionally, name this test as the experiment file. 
 4. Under the `Test` tab select `Run a single test` and under `Test class` select the experiment file. 
