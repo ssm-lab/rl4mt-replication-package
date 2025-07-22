@@ -4,7 +4,7 @@
 (Accepted for [MODELS 2025](https://2025.models-conf.com/track/models-2025-research-papers).)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15805579.svg)](https://doi.org/10.5281/zenodo.15805579)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16321499.svg)](https://doi.org/10.5281/zenodo.16321499)
 
 
 ## About
